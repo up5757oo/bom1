@@ -70,8 +70,6 @@
   </script>
     <div id="chart_div"></div>
 
-XXXXXXX
-
 <div>
    <style>
    tfoot {
