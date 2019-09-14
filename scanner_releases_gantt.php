@@ -33,7 +33,7 @@
   data.addRows([
     
    <?php 
-        $sql = "SELECT id, name, app_id, DATE_FORMAT(open_date, '%Y, %m, %m') as open_date, DATE_FORMAT(rtm_date, '%Y, %m, %m') as rtm_date, (rtm_date - open_date) as duration, 0 as percent_complete, 'null' as dependantcies FROM releases where rtm_date > open_date  and rtm_date > sysdate() order by app_id, rtm_date;";
+        $sql = "SELECT id, name, app_id, DATE_FORMAT(open_date, '%Y, %m, %e') as open_date, DATE_FORMAT(rtm_date, '%Y, %m, %e') as rtm_date, (rtm_date - open_date) as duration, 0 as percent_complete, 'null' as dependantcies FROM releases where rtm_date > open_date  and rtm_date > sysdate() order by app_id, rtm_date;";
         $result = $db->query($sql);
         
                         if ($result->num_rows > 0) {
